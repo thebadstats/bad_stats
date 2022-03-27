@@ -43,5 +43,7 @@ simulate_p_dist = function(probs, n_p){ # simulate n_p p-values from multinomial
   return(results)
 }
 
-ps = simulate_p_dist(null_probs_empirical(primary_data), n_p = 10000) # simulate 1000 p-values
+ps = simulate_p_dist(null_probs_empirical(primary_data), n_p = 10000) # simulate 10000 p-values
 mean(colSums(ps) == dim(ps)[1]) # what proportion of simulations returned all p-values = 1
+
+# result: .0118
